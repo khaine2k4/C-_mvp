@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyStockApp.Models;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace MyStockApp.Controllers
 {
+    [Authorize(Roles = "Admin,User")]
     public class ProductsController : Controller
     {
         private readonly MyStockContext _context;
@@ -43,6 +46,7 @@ namespace MyStockApp.Controllers
         }
 
         // GET: Products/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -65,6 +69,7 @@ namespace MyStockApp.Controllers
         }
 
         // GET: Products/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -116,6 +121,7 @@ namespace MyStockApp.Controllers
         }
 
         // GET: Products/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
