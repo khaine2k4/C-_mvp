@@ -6,7 +6,7 @@
 
 <h1>Index</h1>
 
-@if (User.IsInRole("admin"))
+@if (User.IsInRole("Admin"))
 {
     <p>
         <a asp-action="Create">Create New</a>
@@ -40,13 +40,13 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @if (User.IsInRole("admin"))
+                @if (User.IsInRole("Admin"))
                 {
                     <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a>
                     <text> | </text>
                 }
                 <a asp-action="Details" asp-route-id="@item.ProductId">Details</a>
-                @if (User.IsInRole("admin"))
+                @if (User.IsInRole("Admin"))
                 {
                     <text> | </text>
                     <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
