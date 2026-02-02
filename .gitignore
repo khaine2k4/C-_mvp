@@ -75,8 +75,43 @@ _pkginfo.txt
 # Visual Studio cache files
 # files ending in .cache can be ignored
 *.[Cc]ache
+*.cache.json
 # but keep track of directories ending in .cache
 !*.[Cc]ache/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*.pidb
+*.svclog
+*.scc
+
+# Build results
+*.snupkg
+*.dgspec.json
+assets.json
+*.assets.json
+*.nuget.cache
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.CoreCompileInputs.cache
+*.FileListAbsolute.txt
+staticwebassets.upToDateCheck.txt
+
+# Static web assets cache files
+*.dswa.cache.json
+rjsmcshtml.dswa.cache.json
+rjsmrazor.dswa.cache.json
+rpswa.dswa.cache.json
 
 # Others
 ClientBin/
